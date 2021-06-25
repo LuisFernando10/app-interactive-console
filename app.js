@@ -14,6 +14,7 @@ const main = async() => {
     const tareas = new Tareas(); //Instanciamiento
 
     do {
+        // Imprimir el menú
         option = await inquirerMenu();
         
         switch( option ){
@@ -28,7 +29,7 @@ const main = async() => {
             break;
 
             case '2':
-                console.log( tareas._listado );
+                console.log( tareas.listadoArr );
             break;
         }
 
