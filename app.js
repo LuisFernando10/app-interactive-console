@@ -6,13 +6,22 @@ const {
     pausa,
     leerInput 
 } = require('./helpers/inquirer');
-const { guardarBD } = require('./helpers/guardarArchivo');
+const { guardarBD, leerDB } = require('./helpers/guardarArchivo');
 const Tareas = require('./models/tareas');
 
 const main = async() => {
 
     let option = '';
-    const tareas = new Tareas(); //Instanciamiento
+
+    //Instanciamientos
+    const tareas = new Tareas();
+    const tareasLeerDB = leerDB();
+
+    if( tareasLeerDB ){
+        // Establecer tareas
+    }
+
+    await pausa();
 
     do {
         // Imprimir el menú
