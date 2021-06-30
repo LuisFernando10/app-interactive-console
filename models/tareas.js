@@ -40,13 +40,38 @@
             
             this.listadoArr.forEach( (tarea, index) => {
 
-                const counter_item = `${ index + 1 }`.green;
+                const counter_item = `${ index + 1 }.`.green;
                 const { description, completedIn } = tarea;
                 const status = ( completedIn )
                                 ? 'Completada'.green
                                 : 'Pendiente'.red;
 
-                console.log( `${ counter_item }. ${ description } :: ${ status }`);
+                console.log( `${ counter_item } ${ description } :: ${ status }`);
+            })
+        }
+
+        listarPendientesCompletadas( completadas = true ) {
+
+            let counter_item = '1';
+
+            console.log();//Salto línea
+            
+            this.listadoArr.forEach( tarea => {
+                
+                const { description, completedIn } = tarea;
+                const counter_item_color = `${counter_item}.`.green;
+                const status = ( completedIn )
+                                ? 'Completada'.green
+                                : 'Pendiente'.red;
+
+                if ( completadas === true && completedIn !== null){
+                    console.log( `${ counter_item_color } ${ description } :: ${ status } (${ completedIn })`);
+                    counter_item++;
+                }
+                else if ( completadas == false && completedIn === null){
+                    console.log( `${ counter_item_color } ${ description } :: ${ status }`);
+                    counter_item++;
+                }
             })
         }
 
