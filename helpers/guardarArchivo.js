@@ -3,7 +3,7 @@ const fs = require('fs');
 const file = './db/data.json';
 
 const guardarBD = ( data ) => {
-    fs.writeFileSync( file, JSON.stringify( data) );
+    fs.writeFileSync( file, JSON.stringify(data) );
 }
 
 const leerDB = () => {
@@ -13,7 +13,7 @@ const leerDB = () => {
     const info = fs.readFileSync( file, { encoding: 'utf-8' } );
     const data = JSON.parse( info );
 
-    return null;
+    return data;
 }
 
 module.exports = {

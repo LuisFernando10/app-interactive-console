@@ -17,8 +17,7 @@ const main = async() => {
     const tareas = new Tareas();
     const tareasLeerDB = leerDB();
 
-    if( tareasLeerDB ){
-        // Establecer tareas
+    if( tareasLeerDB ){ // Cargar tareas
         tareas.cargarTareasFromArray( tareasLeerDB );
     }
 
@@ -38,7 +37,8 @@ const main = async() => {
             break;
 
             case '2':
-                console.log( tareas.listadoArr );
+                tareas.listadoCompleto();
+                //console.log( tareas.listadoArr );
             break;
         }
 
