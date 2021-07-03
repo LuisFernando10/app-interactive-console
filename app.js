@@ -5,7 +5,8 @@ const {
     inquirerMenu, 
     pausa,
     leerInput, 
-    listadoTareasBorrar
+    listadoTareasBorrar,
+    confirmar
 } = require('./helpers/inquirer');
 const { guardarBD, leerDB } = require('./helpers/guardarArchivo');
 const Tareas = require('./models/tareas');
@@ -51,7 +52,13 @@ const main = async() => {
 
             case '6':
                 const id = await listadoTareasBorrar( tareas.listadoArr );
-                console.log( { id } );
+                if( id !== '0' ){
+                    const confirm_delete = await confirmar( '¿Está seguro?' );
+                    if( confirm_delete ){
+                        tareas.borrarTarea( id );
+                        console.log('Tarea eliminada correctamente.');
+                    }
+                }
             break;
         }
 

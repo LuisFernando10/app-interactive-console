@@ -98,6 +98,11 @@ const listadoTareasBorrar = async( tareas = [] ) => {
             }
         });
 
+        choices.unshift({
+            value: '0',
+            name: '0.'.green + 'Cancelar.'
+        });
+
         const preguntas = [
             {
                 type: 'list',
@@ -111,7 +116,7 @@ const listadoTareasBorrar = async( tareas = [] ) => {
         return id;
 }
 
-const confirmar = ( message ) => {
+const confirmar = async( message ) => {
 
     const question = [
         {
@@ -122,6 +127,7 @@ const confirmar = ( message ) => {
     ];
 
     const { ok } = await inquirer.prompt( question );
+    return ok;
 }
 
 module.exports = {
