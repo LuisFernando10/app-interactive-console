@@ -82,6 +82,23 @@
             })
         }
 
+        toggleCompletadas( ids = [] ){
+
+            ids.forEach( id => {
+
+                const tarea = this._listado[id];
+                if( !tarea.completedIn ){
+                    tarea.completedIn = new Date().toISOString();
+                }
+            });
+
+            this.listadoArr.forEach( tarea => {
+                
+                if( !ids.includes(tarea.id) ){
+                    this._listado[tarea.id].completedIn = null;
+                }
+            });
+        }
     }
 
     module.exports = Tareas;

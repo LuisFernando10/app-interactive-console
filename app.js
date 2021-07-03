@@ -53,8 +53,7 @@ const main = async() => {
 
             case '5': // Completado | Pendiente
                 const ids = await listadoTareasCheckbox( tareas.listadoArr );
-
-                console.log( ids )
+                tareas.toggleCompletadas( ids );
             break;
 
             case '6': // Borrar
