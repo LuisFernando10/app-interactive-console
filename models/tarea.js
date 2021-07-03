@@ -11,6 +11,7 @@
 
             this.id = uuiv4();
             this.description = description;
+            this.completedIn = null;
         }
     }
 
