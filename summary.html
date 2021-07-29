@@ -1,0 +1,96 @@
+
+    <!-- ¿Qué es HTML? -->
+    Lenguaje marcado de etiquetas que se utiliza para establecer la estructura de las páginas web, se usa por medio de
+    reglas establecidas por medio de "etiquetas y atributos".
+
+    <!-- Estructura HTML -->
+    <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        </head>
+        <body>
+            
+        </body>
+    </html>
+
+    <!-- <!DOCTYPE html> -->
+    Etiqueta estandarizada que indica a los navegadores que se trabajará con HTML5
+
+    <!-- <html></html> -->
+    Es la etiqueta principal en la que se incluirá todo el contenido de una página web.
+
+    <!-- <head></head> -->
+    Es la etiqueta en la cual se incluirán los metadatos (Los metadatos son aquellas configuraciones que 
+    no son visibles en el cuerpo de la página pero que son instrucciones para los navegadores), en él va por ejemplo:
+
+    - Especificaciones para que la página se visualice en dispositos móviles
+    - Tipo de acentuación con la que trabajarán los textos de la página
+    - Especificaciones para determinados navegadores
+    - Título de la página
+    - Inclución de archivos externos y librerías
+    
+    <!-- <body></body> -->
+    Es la etiqueta en la que irá todo el contenido visible en la página web, en ellos podemos encontrar:
+    
+    - Párrafos <p></p> => Dentro de esta etiqueta irá el texto de una página web
+    - Salto de línea <br> =>  Esta etiqueta se encarga de insertar un espacio entre párrafos o textos
+    - Línea horizontal <hr> => Agrewga una línea horizontal a un contenido
+    - Texto preformateado <pre></pre> => Esta etiqueta formatea un determinado texto que resalta y se diferencia de los demás
+      y en él se respetan los saltos de línea y aliaciónes.
+    - Encabezados <h1></h1>...<h6></h6> => Son los titulos o encabezados que resaltan sobre los textos de las páginas
+      (De forma ascendente variará el tamaño del encabezado)
+    - Énfasis <strong></strong>, <em></em> => Son etiquetas que se encargan de diferenciar cierto segmento de texto para resaltarlo,
+      el "strong" convierte el texto en negrilla y el "em" convierte el texto en cursiva.
+    - Enlaces <a></a> => Esta etiqueta permite direccionar hacia otras páginas al momento de hacer click.
+    - Imágenes <img> => Permite agregar imágenes a la página web.
+    - Listas <ul></ul>, <ol></ol>, <li></li>, <dt></dt>, <dl></dl>, <dd></dd> => Son etiquetas que permiten listar diferentes
+      contenidos de una forma ordenada o desordenada, anidadas y lista por definiciones, entre ellas están:
+      <ul></ul> => Declara una lista desordenada, agregando viñetas a los elementos.
+      <ol></ol> => Declara una lista ordenada, agregando una numeración ascendente a los elementos.
+      <li></li> => Son cada uno de los elementos, estos van incluídos dentro de los ul, ol.
+      <dl></dl> => Se utiliza para asociar un término y la definición del mismo.
+<     <dd></dd> => Provee detalles acerca de o la definición de un término precedente en una lista de descripciones ( <dl> ).
+      <dt></dt> => Especifica un término en una descripción o lista de definiciones, y como tal debe utilizarse dentro 
+      de un elemento <dl> 
+     Tabla  <table></table> => Es la marca de comienzo de la tabla.
+      <tr></tr> =>  Es la marca de comienzo de una fila. Esta marca debe estar dentro del elemento table.
+      <td></td> => Es la marca de comienzo de una celda
+
+     Tabla con encabezado <th></th> => Es una tabla son las celdas de encabezado. 
+     Normalmente la primer fila de una tabla puede representar los títulos para cada columna.
+     Tabla con título <caption></caption> => Para disponer un título a una tabla debemos incorporar el elemento caption
+     inmediatamente después que abrimos la marca table
+     Tabla y combinación de celdas <rowsspan>, <colspan> En algunas situaciones se necesita que una celda ocupe el lugar de dos o más celdas en forma horizonzal o vertical, 
+     para estos casos el elemento td o th dispone de dos propiedades llamadas rowspan y colspan.
+     Contenido de la cabecera de la página <title></title> => El elemento title nos permite definir el título que aparecerá en la barra del navegador
+     (es decir en la parte más alta de la ventana)
+
+     <!-- Principales etiquetas y atributos: -->
+    Los atributos o propiedades, son especificaciones que modifican características de las etiquetas y permiten un funcionamiento en concreto
+     - <img src="" alt="" width="" height="" class=""> => 
+       src: Es la ruta hacia la imagen que se desea mostrar, ejemplo: imágenes/imagen.png 
+       alt: Es una descripción de la imágen en el caso que ésta no cargue en el navegador.
+       width: Modifica el ancho de una imágen, generalmente ésta medida está dada en pixeles.
+       heigth: Modifica el alto de una imágen , generalmente ésta medida está dada en pixeles.
+       class: Este atributo recibe cadenas de texto que me permitirán interactuar con estilos CSS o funcionalidades Java Script
+
+    - <a href="" target="" title=""></a> => 
+      href: Es la ruta de destino a la cual va a apuntar la página actual
+      target (_blank): Permite abrir la página en otra pestaña del navegador.
+      title: Agrega un título descriptivo al elemento cuando se pasa el cursor por encima
+
+    - <table border=""></table>
+      border: Es el grosor del contorno de la tabla
+
+    - <tr rowspan=""></tr> =>
+      rowspan: Propiedad que combina las filas de una tabla
+    
+    - <td colspan=""></td> =>
+      colspan: Propiedad que combina las columnas de una tabla
+
+
+
